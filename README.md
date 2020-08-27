@@ -11,6 +11,8 @@
     - add "/intercepter" router path at the end
     - use POST call
     - curl -X POST http://edcc1422a52b.ngrok.io/intercepter
+- In capsule, query to log at the local setup endpoint will look like this:
+    - http.postUrl("http://edcc1422a52b.ngrok.io/intercepter", errorObject, {passAsJson:true, cacheTime:0})
 
 ### Installed npm packages
 - npm install --save-dev nodemon

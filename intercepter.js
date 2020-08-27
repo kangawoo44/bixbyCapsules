@@ -9,7 +9,9 @@ function intercepter (req, res) {
     let items = req.body
     // items = items.filter(x => x.hasSomething)
     let jsonString = JSON.stringify(items, null, 2)
-    fs.writeFileSync('./test.js', jsonString)
+    fs.appendFileSync('./log.js', jsonString)
+    // fs.writeFileSync('./test.js', jsonString)
+    console.log(jsonString)
     return res.send('OK')
     //res.sendStatus(200) === res.status(200).send('OK')
 }
